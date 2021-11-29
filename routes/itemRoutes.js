@@ -2,7 +2,6 @@ const express = require("express");
 const itemRoutes = express.Router();
 const fs = require("fs");
 
-
 // datapath
 const itemDataPath = "./storage/items.json";
 
@@ -23,10 +22,10 @@ const readItemData = () => {
 itemRoutes.post("/items/create", (req, res) => {
   // read existing item data
   const existingItems = readItemData();
-    // get the new item data from post request
+  // get the new item data from post request
   const itemData = req.body;
-//create random item id
-itemData.itemId = Math.floor(1000 + Math.random() * 9000);
+  //create random item id
+  itemData.itemId = Math.floor(1000 + Math.random() * 9000);
   //append the item data
   existingItems.push(itemData);
   //save the new user data
@@ -46,8 +45,7 @@ itemRoutes.get("/items/:itemId", (req, res) => {
   //get the existing user data
   const existingItems = readItemData();
   //check if the itemId exist or not
-  const findExistingItem = existingItems.find(
-    (item) => item.itemId == itemId);
+  const findExistingItem = existingItems.find((item) => item.itemId == itemId);
   if (!findExistingItem) {
     return res.status(409).send({ error: true, message: "Item ID not exist" });
   }
@@ -63,8 +61,7 @@ itemRoutes.put("/items/update/:itemId", (req, res) => {
   //get the existing user data
   const existingItems = readItemData();
   //check if the itemname exist or not
-  const findExistingItem = existingItems.find(
-    (item) => item.itemId == itemId);
+  const findExistingItem = existingItems.find((item) => item.itemId == itemId);
   if (!findExistingItem) {
     return res.status(409).send({ error: true, message: "Item ID not exist" });
   }

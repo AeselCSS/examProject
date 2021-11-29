@@ -1,18 +1,18 @@
 [
-    {
-      "name": "T-shirt",
-      "category": "Tøj",
-      "price": 100,
-      "imageURL": "Test",
-      "description": "Lorem ipsum",
-      "itemId": 2626
-    },
-    {
-      "name": "Iglo Telt",
-      "category": "Outdoor",
-      "price": 550,
-      "imageURL": "Test",
-      "description": "Lorem ipsum",
-      "itemId": 8586
-    }
-  ]
+  {
+    "name": "T-shirt",
+    "category": "Tøj",
+    "price": 100,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 2626
+  },
+  {
+    "name": "Iglo Telt",
+    "category": "Outdoor",
+    "price": 550,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 8586
+  }
+]
