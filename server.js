@@ -4,6 +4,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static("public"));
+
+
 // route
 const routes = require("./routes/routes");
 app.use("/", routes);
