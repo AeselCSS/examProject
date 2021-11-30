@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="form-signin" action="auth" method="POST">
+        <h2 class="form-signin-heading">Please login</h2>
+        <input
+          type="text" class="form-control" name="username" placeholder="Username" required="" autofocus=""/>
+        <input
+          type="password" class="form-control" name="password" placeholder="Password" required=""/>
+        <label class="checkbox"> <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"/> Remember me</label>
+        <button class="submitButton" id="submitButton" type="submit">Login</button>
+
+        <p id="registerAccount">Don't have an account? <a href="register.html">Click here to register</a></p>
+      </form>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

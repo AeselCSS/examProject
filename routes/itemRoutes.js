@@ -82,7 +82,7 @@ itemRoutes.delete("/items/delete/:itemId", (req, res) => {
   //get the existing userdata
   const existingItems = readItemData();
   //filter the userdata to remove it
-  const filterItem = existingItems.filter((item) => item.itemId !== itemId);
+  const filterItem = existingItems.filter((item) => item.itemId != itemId);
   if (existingItems.length === filterItem.length) {
     return res
       .status(409)
