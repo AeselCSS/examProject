@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account</title>
-  <link rel="stylesheet" href="./../css/account.css">
-</head>
-<body>
-  
-    <div class="navigation">
-        <a class="active" href="index.html">Home</a>
-        <a href="account.html">My Account</a>
-        <a href="itemList.html">My Listings</a>
-        <a href="#logout">Logout</a>
-      </div> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account</title>
+    <link rel="stylesheet" href="./../css/navigation.css"/>
+    <link rel="stylesheet" href="./../css/account.css" />
+    <link rel="stylesheet" href="./../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+  </head>
+  <body>
+    <!-- START OF NAVIGATION -->
+  <div class="navigation">
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <div class="dropdown">
+      <button class="dropbtn" id="user-dropbtn"><i class="fa fa-fw fa-user"></i> Account</button> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="account.html">Show user</a>
+        <a href="updateUser.html">Update user</a>
+        <a id="delete-user" href="deleteUser.html">Delete user</a>
+      </div>
+    </div>
+      <div class="dropdown">
+      <button class="dropbtn" id="user-dropbtn"><i class="fa fa-puzzle-piece"></i> Items for sale</button> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="itemList.html">Show items</a>
+        <a href="createItem.html">Create item</a>
+        <a href="updateItem.html">Update item</a>
+        <a id="delete-item" href="#">Delete item</a>
+      </div>
+    </div> 
+    <a href="#" id="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+  </div>
+  <!-- END OF NAVIGATION -->
 
-<button id="listItem-btn">see My items</button>
-<div id="listOfItems">
-    <!-- Data goes here.... i hope... -->
-</div>
-  
-  <script src="./../js/account.js"></script>
-</body>
+    <div class="container">
+      <h2>Account details</h2>
+      <table id="showUserData">
+        
+        <!-- Data goes here.... i hope... -->
+      </table>
+    </div>
+    
+
+    <script src="./../js/account.js"></script>
+  </body>
 </html>

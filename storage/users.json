@@ -1,30 +1,27 @@
 [
   {
-    "name": "Thomas",
-    "email": "Tonze@shizzle.com",
-    "password": "password4700",
     "username": "Tonze47",
+    "password": "password4700",
     "userId": 552494
   },
   {
-    "name": "Martin",
-    "email": "funkyfungus@gmail.com",
-    "password": "password1",
     "username": "Maniac",
+    "password": "password1",
     "userId": 994051
   },
   {
-    "name": "Chris",
-    "email": "aesel@gmail.com",
-    "password": "lupus__!)",
     "username": "anaheri",
+    "password": "test",
     "userId": 388875
   },
   {
-    "name": "Albert",
-    "email": "Albert@gmail.com",
-    "password": "DeusVult",
     "username": "Albert",
+    "password": "DeusVult",
     "userId": 500709
+  },
+  {
+    "username": "batman",
+    "password": "superman",
+    "userId": 916057
   }
 ]

@@ -1,25 +1,32 @@
-document.getElementById("listItem-btn").addEventListener("click", async () => {
-  let response = await fetch('http://localhost:1337/items/list', { method: "GET" });
-  console.log(response)
-  let body = await response.json();
 
-  document.getElementById("listOfItems").innerHTML = JSON.stringify(body);
+window.addEventListener("pageshow", async () => {
+  let table = document.getElementById('showUserData');
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  let url = `http://localhost:1337/users/${user.username}`;
+  console.log(user);
+  
+  let result = await fetch(url, { method: "GET" })
+  .then(res => res.json())
+  .catch(err => console.log(err));
+  
+
+  let userDataTableHtml = `
+  <tr>
+      <th></th>
+      <th></th>
+  </tr>
+  `;
+
+  for(const userData in result) {
+    userDataTableHtml += `
+    <tr>
+      <td>${userData}</td>
+      <td>${result[userData]}</td>
+    </tr>
+    `;
+  }
+  table.innerHTML = userDataTableHtml;
+
+
 });
-
-// const button = document.getElementById("listItem-btn")
-// button.addEventListener("click", (e) => {
-//   console.log("button clicked");
-
-//   fetch("http://localhost:1337/items/list", { method: "GET" })
-//     .then((response) => {
-//       if (response.ok) return response.json();
-//       throw new Error("Request fejlede.");
-//     })
-
-//     .then((itemList) => {
-//       console.log(itemList);
-//     });
-// });
-// document.getElementById("listItem-btn").addEventListener("click", ()=> {
-//     console.log("button clicked");
-//   });

@@ -1,4 +1,5 @@
 const express = require("express");
+const formData = require("express-form-data");
 const userRoutes = express.Router();
 const fs = require("fs");
 
@@ -48,15 +49,15 @@ userRoutes.get("/users/list", (req, res) => {
   res.send(users);
 });
 
-userRoutes.get("/users/:userId", (req, res) => {
-  //get the userId from url
-  const userId = req.params.userId;
+userRoutes.get("/users/:username", (req, res) => {
+  //get the username from url
+  const username = req.params.username;
   //get the existing user data
   const existingUsers = readUserData();
   //check if the userId exist or not
-  const findexistingUsers = existingUsers.find((user) => user.userId == userId);
+  const findexistingUsers = existingUsers.find((user) => user.username == username);
   if (!findexistingUsers) {
-    return res.status(409).send({ error: true, message: "userId not exist" });
+    return res.status(409).send({ error: true, message: "username not exist" });
   }
   res.send(findexistingUsers);
 });
@@ -64,36 +65,36 @@ userRoutes.get("/users/:userId", (req, res) => {
 /* Update - PUT method */
 userRoutes.put("/users/update/:username", (req, res) => {
   //get the userId from url
-  const userId = req.params.userId;
+  const username = req.params.username;
   //get the update data
   const userData = req.body;
   //get the existing user data
   const existingUsers = readUserData();
   //check if the userId exist or not
   const findexistingUsers = existingUsers.find(
-    (user) => user.username == userId
+    (user) => user.username == username
   );
   if (!findexistingUsers) {
-    return res.status(409).send({ error: true, message: "userId not exist" });
+    return res.status(409).send({ error: true, message: "username not exist" });
   }
   //filter the userdata
-  const updateUser = existingUsers.filter((user) => user.userId != userId);
+  const updateUser = existingUsers.filter((user) => user.username != username);
   //push the updated data
   updateUser.push(userData);
   //finally save it
   writeUserData(updateUser);
   res.send({
     success: true,
-    message: `User with UserId ${userId} updated successfully`,
+    message: `User with UserId ${username} updated successfully`,
   });
 });
 /* Delete - Delete method */
-userRoutes.delete("/users/delete/:userId", (req, res) => {
-  const userId = req.params.userId;
+userRoutes.delete("/users/delete/:username", (req, res) => {
+  const username = req.params.username;
   //get the existing userdata
   const existingUsers = readUserData();
   //filter the userdata to remove it
-  const filterUser = existingUsers.filter((user) => user.userId != userId);
+  const filterUser = existingUsers.filter((user) => user.username != username);
   if (existingUsers.length === filterUser.length) {
     return res
       .status(409)
@@ -103,8 +104,38 @@ userRoutes.delete("/users/delete/:userId", (req, res) => {
   writeUserData(filterUser);
   res.send({
     success: true,
-    message: `User with UserId ${userId} removed successfully`,
+    message: `User removed successfully`,
   });
 });
+
+/* OTHER OPERATIONS */
+
+// login endpoint
+userRoutes.post("/users/login", (req, res) => {
+  const userData = req.body;
+  console.log(userData.password);
+  
+  //get the username from url
+  const username = req.params.username;
+  //get the existing user data
+  const existingUsers = readUserData();
+  //check if the userId exist or not
+  const findexistingUsers = existingUsers.find((user) => user.username == username);
+  if (!findexistingUsers) {
+    return res.status(409).send({ error: true, message: "username not exist" });
+  }
+  res.send(findexistingUsers);
+  
+  if (existingUsers) {
+    if (userData.password == existingUsers.password) {
+      res.status(200).send(true);
+    } else {
+      res.status(401).send(false);
+    }
+  } else {
+    res.status(404).send(false);
+  }
+});
+
 
 module.exports = userRoutes;

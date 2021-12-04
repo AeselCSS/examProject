@@ -1,18 +1,90 @@
 [
   {
+    "category": "Fashion",
     "name": "T-shirt",
-    "category": "Tøj",
     "price": 100,
     "imageURL": "Test",
     "description": "Lorem ipsum",
     "itemId": 2626
   },
   {
-    "name": "Iglo Telt",
     "category": "Outdoor",
+    "name": "Iglo Telt",
     "price": 550,
     "imageURL": "Test",
     "description": "Lorem ipsum",
     "itemId": 8586
+  },
+  {
+    "category": "Electronics",
+    "name": "PC",
+    "price": 10000,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 1564
+  },
+  {
+    "category": "Electronics",
+    "name": "Grafic Card",
+    "price": 3000,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 7556
+  },
+  {
+    "category": "Fashion",
+    "name": "Pants",
+    "price": 250,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 9564
+  },
+  {
+    "category": "Other",
+    "name": "Puppy",
+    "price": 600,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 1235
+  },
+  {
+    "category": "Toys",
+    "name": "Darth Vader puzzle",
+    "price": 50,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 9458
+  },
+  {
+    "category": "Home and Garden",
+    "name": "Hedgetrimmer",
+    "price": 1000,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 7594
+  },
+  {
+    "category": "Sport and Leisure",
+    "name": "Bicycle",
+    "price": 900,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 9647
+  },
+  {
+    "category": "Home and Garden",
+    "name": "Garden Gnome",
+    "price": 100,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 4455
+  },
+  {
+    "category": "Cars",
+    "name": "BMW",
+    "price": 10000000,
+    "imageURL": "Test",
+    "description": "Lorem ipsum",
+    "itemId": 8846
   }
 ]

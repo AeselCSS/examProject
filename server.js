@@ -4,12 +4,15 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static("public"));
-
+// load CORS
+const cors = require("cors");
+app.use(cors());
 
 // route
 const routes = require("./routes/routes");
 app.use("/", routes);
+
+
 
 // Boot up server
 const port = process.env.PORT || 1337;

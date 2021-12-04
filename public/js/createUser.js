@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-    const user = localStorage.getItem("user");
-    if (user) {
-      location.href = "/";
-    }
-  
-    document.getElementById("form").addEventListener("submit", (event) => {
-      event.preventDefault();
+    document.getElementById("form").addEventListener("submit", (e) => {
+      e.preventDefault();
   
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
@@ -15,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         password: password,
       };
   
-      fetch("http://localhost:1337/users/login", {
+      fetch("http://localhost:1337/users/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,11 +20,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         .then((response) => response.json())
         .then((response) => {
           if (response) {
-            // Save login data to localstorage in order to keep user logged in
-            localStorage.setItem("user", JSON.stringify(user));
-            location.href = "/public/views/index.html";
-          } else {
-            window.alert("Information are incorrect");
+            location.href = "/public/views/login.html";
           }
         })
         .catch(() => {
@@ -37,4 +28,3 @@ document.addEventListener("DOMContentLoaded", (e) => {
         });
     });
   });
-  

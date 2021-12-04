@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="./../css/navigation.css">
-  <link rel="stylesheet" href="./../css/index.css">
+  <title>Update item</title>
+  <link rel="stylesheet" href="./../css/navigation.css" />
+  <link rel="stylesheet" href="./../css/updateItem.css">
   <link rel="stylesheet" href="./../../node_modules/@fortawesome/fontawesome-free/css/all.css">
 </head>
 <body>
+  
   <!-- START OF NAVIGATION -->
   <div class="navigation">
     <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
@@ -23,7 +24,6 @@
         <a id="delete-user" href="#">Delete user</a>
       </div>
     </div>
-
       <div class="dropdown">
       <button class="dropbtn" id="user-dropbtn"><i class="fa fa-puzzle-piece"></i> Items for sale</button> 
         <i class="fa fa-caret-down"></i>
@@ -35,36 +35,11 @@
         <a id="delete-item" href="#">Delete item</a>
       </div>
     </div> 
-    
     <a href="#" id="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
-  </div>
+</div>
   <!-- END OF NAVIGATION -->
 
-<!-- START SEARCH FOR ITEMS 
-action="/items/category/:category" method="get" enctype="multipart/form-data" -->
-<form id="searchCategories">
-  <h2>Search items by category</h2>
-  <label>Search for items by choosing a category from the menu and press the search button</label>:</label>
-      <select id=category>
-        <option value="0">Select category:</option>
-        <option value="Cars">Cars</option>
-        <option value="Outdoor">Outdoor</option>
-        <option value="Home and Garden">Home and Garden </option>
-        <option value="Electronics">Electronics</option>
-        <option value="Fashion">Fashion</option>
-        <option value="Sport and Leisure">Sport amd Leisure</option>
-        <option value="Toys">Toys</option>
-        <option value="Other">Other</option>
-      </select>
-      <button type="submit">Search</button>
 
-  <form id="search-results">
-  <!-- Search result goes here... -->
-  </form>
-</form>
-<!-- END SEARCH FOR ITEMS -->
-
-  </div>
   <script src="./../js/index.js"></script>
 </body>
 </html>
