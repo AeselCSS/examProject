@@ -83,7 +83,7 @@ userRoutes.put("/users/update/:username", (req, res) => {
   writeUserData(updateUser);
   res.send({
     success: true,
-    message: `User with UserId ${username} updated successfully`,
+    message: "User updated successfully",
   });
 });
 /* Delete - Delete method */
@@ -124,16 +124,7 @@ userRoutes.post("/users/login", (req, res) => {
     return res.status(409).send({ error: true, message: "username not exist" });
   }
   res.send(findexistingUsers);
-  // if user exist check if password is correct
-  // if (existingUsers) {
-  //   if (username !== findexistingUsers.username && password !== findexistingUsers.password) {
-  //     res.status(401).send({ error: true });
-  //   } else {
-  //     res.status(200);
-  //   }
-  // } else {
-  //   res.status(404).send({ error: true });
-  // }
+  
 });
 
 

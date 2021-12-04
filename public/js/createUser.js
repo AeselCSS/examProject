@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
   
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
-      const uId = Math.floor(100000 + Math.random() * 900000);
+      const userId = Math.floor(100000 + Math.random() * 900000);
 
       const user = {
         username: username,
         password: password,
-        uId: uId,
+        userId: userId,
       };
   
       fetch("http://localhost:1337/users/create", {

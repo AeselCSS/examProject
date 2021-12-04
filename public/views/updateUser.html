@@ -40,18 +40,21 @@
 </div>
 <!-- END OF NAVIGATION -->
 
+<!-- UPDATE ACCOUNT START-->
   <div class="wrapper">
-    <form id=createUserForm class="form-signup">
-      <h2 class="form-signup-heading">Create new account</h2>
+    <form id="updateUserForm" class="form-signup">
+      <h2 class="form-signup-heading">Update account</h2>
       <input
-        type="text" id="username" class="form-control" name="username" placeholder="Username cannot be changed" disabled/>
+        type="text" id="username" class="form-control" name="username" placeholder="New Username" required/>
       <input
-        type="password" id="password" class="form-control" name="password" placeholder="Password" required=""/>
-      <button class="submitButton" id="submitButton" value="Submit" type="submit">Create Account</button>
-  
+        type="password" id="password" class="form-control" name="password" placeholder="New Password" required/>
+      <button class="submitButton" id="submitUpdate" value="Submit" type="submit">Update Account</button>
     </form>
-  </div>
+  
+</div>
 
+</p id="updateUserMessage"></p>
+  <!-- UPDATE ACCOUNT END-->
   <script src="./../js/updateUser.js"></script>
   <script src="./../js/logout.js"></script>
 </body>
