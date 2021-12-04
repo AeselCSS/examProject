@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register account</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="./../css/createUser.css" type="text/css">
     <link rel="stylesheet" href="./../../node_modules/@fortawesome/fontawesome-free/css/all.css">
   </head>
   <body>
     
-        <h1>Account creation</h1>
-        <form id="form">
-          <input placeholder="Username" type="text"id="username" />
-          <input placeholder="Password" id="password" />
-          <input value="Submit" type="submit" />
-        </form>
-
+    <div class="wrapper">
+      <form id=createUserForm class="form-signup">
+        <h2 class="form-signup-heading">Create new account</h2>
+        <input
+          type="text" id="username" class="form-control" name="username" placeholder="Username" required="" autofocus=""/>
+        <input
+          type="password" id="password" class="form-control" name="password" placeholder="Password" required=""/>
+        <button class="submitButton" id="submitButton" value="Submit" type="submit">Create Account</button>
+    
+      </form>
+    </div>
     <script src="./../js/createUser.js"></script>
   </body>
 </html>
+
+
+

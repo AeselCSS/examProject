@@ -10,7 +10,7 @@ window.addEventListener("pageshow", async () => {
   .then(res => res.json())
   .catch(err => console.log(err));
   
-
+  // result logic goes here
   let userDataTableHtml = `
   <tr>
       <th></th>

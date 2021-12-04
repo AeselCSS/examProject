@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <link rel="stylesheet" href="./../css/navigation.css">
   <link rel="stylesheet" href="./../css/index.css">
   <link rel="stylesheet" href="./../../node_modules/@fortawesome/fontawesome-free/css/all.css">
@@ -20,10 +21,9 @@
       <div class="dropdown-content">
         <a href="account.html">Show user</a>
         <a href="updateUser.html">Update user</a>
-        <a id="delete-user" href="#">Delete user</a>
+        <a id="delete-user" href="deleteUser.html">Delete user</a>
       </div>
     </div>
-
       <div class="dropdown">
       <button class="dropbtn" id="user-dropbtn"><i class="fa fa-puzzle-piece"></i> Items for sale</button> 
         <i class="fa fa-caret-down"></i>
@@ -32,16 +32,15 @@
         <a href="itemList.html">Show items</a>
         <a href="createItem.html">Create item</a>
         <a href="updateItem.html">Update item</a>
-        <a id="delete-item" href="#">Delete item</a>
+        <a id="delete-item" href="deleteItem.html">Delete item</a>
       </div>
     </div> 
-    
-    <a href="#" id="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+    <a href="login.html" id="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
   </div>
   <!-- END OF NAVIGATION -->
-
+<h1>Welcome to the future of shopping</h1>
 <!-- START SEARCH FOR ITEMS 
-action="/items/category/:category" method="get" enctype="multipart/form-data" -->
+action="/items/category/:category" method="get" enctype="multipart/form-data" 
 <form id="searchCategories">
   <h2>Search items by category</h2>
   <label>Search for items by choosing a category from the menu and press the search button</label>:</label>
@@ -59,12 +58,13 @@ action="/items/category/:category" method="get" enctype="multipart/form-data" --
       <button type="submit">Search</button>
 
   <form id="search-results">
-  <!-- Search result goes here... -->
+   Search result goes here...
   </form>
 </form>
-<!-- END SEARCH FOR ITEMS -->
+ END SEARCH FOR ITEMS -->
 
   </div>
   <script src="./../js/index.js"></script>
+  <script src="./../js/logout.js"></script>
 </body>
 </html>

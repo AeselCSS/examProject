@@ -15,7 +15,7 @@ a, a:hover, a:focus, a:active {
   margin-bottom: 80px;
 }
 
-.form-signin {
+.form-signup {
   max-width: 380px;
   padding: 15px 35px 45px;
   margin: 0 auto;
@@ -24,13 +24,9 @@ a, a:hover, a:focus, a:active {
   border-radius: 5px;  
 }
 
-  .form-signin-heading
+  .form-signup-heading
 	.checkbox {
 	  margin-bottom: 30px;
-	}
-
-	.checkbox {
-	  font-weight: normal;
 	}
 
 	.form-control {

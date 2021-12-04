@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", (e) => {
     const user = localStorage.getItem("user");
     if (user) {
-      location.href = "/";
+      location.href = "/public/views/";
     }
   
-    document.getElementById("form").addEventListener("submit", (event) => {
-      event.preventDefault();
+    document.getElementById("loginform").addEventListener("submit", (e) => {
+      e.preventDefault();
   
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
@@ -25,9 +25,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
         .then((response) => response.json())
         .then((response) => {
           if (response) {
-            // Save login data to localstorage in order to keep user logged in
-            localStorage.setItem("user", JSON.stringify(user));
-            location.href = "/public/views/index.html";
+            console.log(response);
+            if (username === response.username && password === response.password) {
+                // Save login data to localstorage in order to keep user logged in
+                localStorage.setItem("user", JSON.stringify(user));
+                location.href = "/public/views/index.html";
+            } else {
+                window.alert("Username or Password is incorrect");
+            }
           } else {
             window.alert("Information are incorrect");
           }

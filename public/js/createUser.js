@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-    document.getElementById("form").addEventListener("submit", (e) => {
+    document.getElementById("createUserForm").addEventListener("submit", (e) => {
       e.preventDefault();
   
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
-  
+      const uId = Math.floor(100000 + Math.random() * 900000);
+
       const user = {
         username: username,
         password: password,
+        uId: uId,
       };
   
       fetch("http://localhost:1337/users/create", {

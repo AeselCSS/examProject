@@ -1,20 +1,5 @@
 [
   {
-    "username": "Tonze47",
-    "password": "password4700",
-    "userId": 552494
-  },
-  {
-    "username": "Maniac",
-    "password": "password1",
-    "userId": 994051
-  },
-  {
-    "username": "anaheri",
-    "password": "test",
-    "userId": 388875
-  },
-  {
     "username": "Albert",
     "password": "DeusVult",
     "userId": 500709
@@ -23,5 +8,20 @@
     "username": "batman",
     "password": "superman",
     "userId": 916057
+  },
+  {
+    "username": "anaheri",
+    "password": "Qwerty123",
+    "userId": 258855
+  },
+  {
+    "username": "filippa",
+    "password": "cebVek-moxfe0-tamver",
+    "userId": 344631
+  },
+  {
+    "username": "August",
+    "password": "zyqqin-9jisby-Tizroc",
+    "uId": 477001
   }
 ]

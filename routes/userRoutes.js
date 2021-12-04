@@ -25,8 +25,6 @@ userRoutes.post("/users/create", (req, res) => {
   const existingUsers = readUserData();
   // get the new user data from post request
   const userData = req.body;
-  //create random userID
-  userData.userId = Math.floor(100000 + Math.random() * 900000);
   // check if username is taken
   const findexistingUsers = existingUsers.find(
     (user) => user.username === userData.username
@@ -113,28 +111,29 @@ userRoutes.delete("/users/delete/:username", (req, res) => {
 // login endpoint
 userRoutes.post("/users/login", (req, res) => {
   const userData = req.body;
-  console.log(userData.password);
-  
   //get the username from url
-  const username = req.params.username;
+  const username = req.body.username;
+  const password = req.body.password;
+  console.log(username + " " + password); /* data from login form recieved */
   //get the existing user data
   const existingUsers = readUserData();
   //check if the userId exist or not
-  const findexistingUsers = existingUsers.find((user) => user.username == username);
+  const findexistingUsers = existingUsers.find((user) => user.username === username);
+  console.log(findexistingUsers);
   if (!findexistingUsers) {
     return res.status(409).send({ error: true, message: "username not exist" });
   }
   res.send(findexistingUsers);
-  
-  if (existingUsers) {
-    if (userData.password == existingUsers.password) {
-      res.status(200).send(true);
-    } else {
-      res.status(401).send(false);
-    }
-  } else {
-    res.status(404).send(false);
-  }
+  // if user exist check if password is correct
+  // if (existingUsers) {
+  //   if (username !== findexistingUsers.username && password !== findexistingUsers.password) {
+  //     res.status(401).send({ error: true });
+  //   } else {
+  //     res.status(200);
+  //   }
+  // } else {
+  //   res.status(404).send({ error: true });
+  // }
 });
 
 

@@ -1,22 +1,22 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="./../css/login.css" />
     <link rel="stylesheet" href="./../../node_modules/@fortawesome/fontawesome-free/css/all.css">
   </head>
   <body>
     <div class="wrapper">
-      <form class="form-signin" action="auth" method="POST">
-        <h2 class="form-signin-heading">Please login</h2>
+      <form id=loginform class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
         <input
-          type="text" class="form-control" name="username" placeholder="Username" required="" autofocus=""/>
+          type="text" id="username" class="form-control" name="username" placeholder="Username" required="" autofocus=""/>
         <input
-          type="password" class="form-control" name="password" placeholder="Password" required=""/>
-        <label class="checkbox"> <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"/> Remember me</label>
+          type="password" id="password" class="form-control" name="password" placeholder="Password" required=""/>
         <button class="submitButton" id="submitButton" type="submit">Login</button>
 
         <p id="registerAccount">Don't have an account? <a href="createUser.html">Click here to register</a></p>
@@ -25,19 +25,19 @@
 
     <script src="./../js/login.js"></script>
   </body>
-</html> -->
+</html>
 
-<html>
+<!-- <html>
   <head>
     
   </head>
   <body>
     <h1>Please sign in</h1>
-    <form id="form">
+    <form id="loginform">
       <input placeholder="username" id="username" />
       <input placeholder="Password" id="password" />
       <input value="Submit" type="submit" />
     </form>
     <script src="./../js/login.js"></script>
   </body>
-</html>
+</html> -->
