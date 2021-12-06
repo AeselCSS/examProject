@@ -8,14 +8,6 @@
     "image": "uploads/516bKImSYiF0VcpkMB9uPMxp.png"
   },
   {
-    "category": "Home and Garden",
-    "name": "Garden gnome",
-    "price": "150",
-    "userId": "591069",
-    "itemId": 4569,
-    "image": "uploads/v3nRRO9RwoLUtlokiD_zThIt.jpeg"
-  },
-  {
     "category": "Sport and Leisure",
     "name": "bike",
     "price": "800",
@@ -30,5 +22,13 @@
     "userId": "591069",
     "itemId": 1554,
     "image": "uploads/T0s3hIJjSv7r-7YKe58ZCncG.jpg"
+  },
+  {
+    "itemId": "1111",
+    "userId": "591069",
+    "category": "Home and Garden",
+    "name": "Gnomeo",
+    "price": "55",
+    "image": "uploads/NWMwfNa5zLYRtpeW_juXCeiD.jpeg"
   }
 ]

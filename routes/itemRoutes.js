@@ -66,11 +66,13 @@ itemRoutes.get("/items/:itemId", (req, res) => {
 });
 
 /* Update - PUT method */
-itemRoutes.put("/items/update/:itemId", (req, res) => {
+itemRoutes.put("/items/update/:itemId", formData.parse(options), (req, res) => {
   //get the itemname from url
   const itemId = req.params.itemId;
   //get the update data
   const itemData = req.body;
+  //add uploaded item
+  itemData.image = req.files.image.path.replace("\\", "/");
   //get the existing user data
   const existingItems = readItemData();
   //check if the itemname exist or not
@@ -80,9 +82,6 @@ itemRoutes.put("/items/update/:itemId", (req, res) => {
       .status(409)
       .send({ error: true, message: "Item ID does not exist" });
   }
-  //console.log(findExistingItem);
-  
-  
   //filter the itemdata
    const updateItem = existingItems.filter((item) => item.itemId != itemId);
    
