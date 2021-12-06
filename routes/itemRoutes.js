@@ -4,10 +4,11 @@ const itemRoutes = express.Router();
 const fs = require("fs");
 
 // uploads
-itemRoutes.use('/uploads', express.static('uploads'));
+itemRoutes.use("/uploads", express.static("uploads"));
 const options = {
-    uploadDir: './uploads'
-}
+  uploadDir: "./uploads",
+};
+
 
 // datapath
 const itemDataPath = "./storage/items.json";
@@ -34,7 +35,7 @@ itemRoutes.post("/items/create", formData.parse(options), (req, res) => {
   //create random item id
   itemData.itemId = Math.floor(1000 + Math.random() * 9000);
   //add uploaded item
-  itemData.thumbnail =req.files.thumbnail.path.replace('\\', '/');
+  itemData.image = req.files.image.path.replace("\\", "/");
   //append the item data
   existingItems.push(itemData);
   //save the new user data
@@ -57,23 +58,11 @@ itemRoutes.get("/items/:itemId", (req, res) => {
   //check if the itemId exist or not
   const findExistingItem = existingItems.find((item) => item.itemId == itemId);
   if (!findExistingItem) {
-    return res.status(409).send({ error: true, message: "Item ID does not exist" });
+    return res
+      .status(409)
+      .send({ error: true, message: "Item ID does not exist" });
   }
   res.send(findExistingItem);
-});
-
-// READ ITEM BY CATEGORY- GET method
-itemRoutes.get("/items/category/:category", (req, res) => {
-  //get the itemname from url
-  const category = req.params.category;
-  //get the existing user data
-  const existingItems = readItemData();
-  //check if the itemId exist or not
-  const findExistingItems = existingItems.find((item) => item.category == category);
-  if (!findExistingItems) {
-    return res.status(409).send({ error: true, message: "Category does not exist" });
-  }
-  res.send(findExistingItems);
 });
 
 /* Update - PUT method */
@@ -87,17 +76,24 @@ itemRoutes.put("/items/update/:itemId", (req, res) => {
   //check if the itemname exist or not
   const findExistingItem = existingItems.find((item) => item.itemId == itemId);
   if (!findExistingItem) {
-    return res.status(409).send({ error: true, message: "Item ID does not exist" });
+    return res
+      .status(409)
+      .send({ error: true, message: "Item ID does not exist" });
   }
-  //filter the userdata
-  const updateItem = existingItems.filter((item) => item.itemId != itemId);
+  //console.log(findExistingItem);
+  
+  
+  //filter the itemdata
+   const updateItem = existingItems.filter((item) => item.itemId != itemId);
+   
   //push the updated data
   updateItem.push(itemData);
+  console.log(updateItem);
   //finally save it
   writeItemData(updateItem);
   res.send({
     success: true,
-    message: `ItemId ${itemId} updated successfully`,
+    message: `ItemId updated successfully`,
   });
 });
 /* Delete - Delete method */
@@ -116,7 +112,7 @@ itemRoutes.delete("/items/delete/:itemId", (req, res) => {
   writeItemData(filterItem);
   res.send({
     success: true,
-    message: `User with ${itemId} removed successfully`,
+    message: `Item removed successfully`,
   });
 });
 

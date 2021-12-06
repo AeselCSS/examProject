@@ -6,11 +6,9 @@ document.getElementById("updateUserForm").addEventListener("submit", (e) => {
   // Find existing users username and add it to the url
   const user = JSON.parse(localStorage.getItem("user"));
   let url = `http://localhost:1337/users/update/${user.username}`;
-  console.log(url);
-  console.log(user);
   // find existing userId
   const userId = user.userId;
-  console.log(userId);
+  
 
   // find new data from the update form
   const newUsername = document.getElementById("username").value;

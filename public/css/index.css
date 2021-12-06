@@ -1,5 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
 
-body { 
-  font-family: 'Lato', sans-serif;
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  background-color: #f2f2f2;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+table {
+  background-color: #fff;
+  width: 100%;
+  color: #222;
+  text-align: left;
+  padding: 15px;
+  font-size: 12px;
+  border: 2px solid #ddd;
+}
+
+table th {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+table td {
+  border-bottom: 1px solid #ddd;
+}
+img {
+  height: 25px;
+}
+
+table td:hover, table tr:hover {
+background-color: #f2f2f2;
 }

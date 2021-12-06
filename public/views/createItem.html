@@ -39,11 +39,11 @@
     <a href="login.html" id="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
   </div>
   <!-- END OF NAVIGATION -->
-
+<!-- CREATE ITEM START -->
   <div class="container">
-    <form >
+    <form id="createItemForm">
       <h2>List item for sale</h2>
-      <select>
+      <select name="category" id="category">
         <option value="0">Select category:</option>
         <option value="Cars">Cars</option>
         <option value="Outdoor">Outdoor</option>
@@ -54,18 +54,18 @@
         <option value="Toys">Toys</option>
         <option value="Other">Other</option>
       </select>
-      <input id="name" type="text" class="form-control" name="name" placeholder="Product name" required/>
-      <input id="price" type="email" class="form-control" name="price" placeholder="Price" required/>
-      <input id="description" type="text" class="form-control" name="description" placeholder="Description" required/>
+      <input id="name" type="text" name="name" placeholder="Product name" required/>
+      <input id="price" type="text" name="price" placeholder="Price" required/>
       <p>please attach picture of item</p>
-      <input type="file" name="thumbnail"/>
+      <input id="image" type="file" name="image"/>
       
-      <button class="submitButton" id="submitButton" type="submit">Submit</button>
+      <button class="submitButton" id="submitButton" type="submit" value="Submit">Submit</button>
 
     </form>
   </div>
-  
+  <!-- CREATE ITEM END -->
 
+  <script src="./../js/checkIfLoggedIn.js"></script>
   <script src="./../js/createItem.js"></script>
   <script src="./../js/logout.js"></script>
 </body>

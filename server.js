@@ -3,8 +3,6 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("views"));
-
 
 // load CORS
 const cors = require("cors");
@@ -12,7 +10,7 @@ app.use(cors());
 
 // route
 const routes = require("./routes/routes");
-app.use("/", routes);
+app.use("/", routes, express.static("public"));
 
 
 

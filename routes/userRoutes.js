@@ -53,7 +53,9 @@ userRoutes.get("/users/:username", (req, res) => {
   //get the existing user data
   const existingUsers = readUserData();
   //check if the userId exist or not
-  const findexistingUsers = existingUsers.find((user) => user.username == username);
+  const findexistingUsers = existingUsers.find(
+    (user) => user.username == username
+  );
   if (!findexistingUsers) {
     return res.status(409).send({ error: true, message: "username not exist" });
   }
@@ -110,22 +112,18 @@ userRoutes.delete("/users/delete/:username", (req, res) => {
 
 // login endpoint
 userRoutes.post("/users/login", (req, res) => {
-  const userData = req.body;
   //get the username from url
   const username = req.body.username;
-  const password = req.body.password;
-  console.log(username + " " + password); /* data from login form recieved */
   //get the existing user data
   const existingUsers = readUserData();
   //check if the userId exist or not
-  const findexistingUsers = existingUsers.find((user) => user.username === username);
-  console.log(findexistingUsers);
+  const findexistingUsers = existingUsers.find(
+    (user) => user.username === username
+  );
   if (!findexistingUsers) {
     return res.status(409).send({ error: true, message: "username not exist" });
   }
   res.send(findexistingUsers);
-  
 });
-
 
 module.exports = userRoutes;

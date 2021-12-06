@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
 
-body{
-  background: #fff;
-  font-family: 'Lato', sans-serif;
-  
+body {
+  font-family: "Lato", sans-serif;
 }
 .container {
-background-color: #f2f2f2;
-width: 600px;
-margin-top: 10px;
-text-align: center;
-border: 1px solid #222;
-border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 5px;
 }
 
 table {
-background-color: #fff;
-width: 600px;
+  background-color: #fff;
+  width: 100%;
   color: #222;
   text-align: left;
   padding: 15px;
@@ -24,20 +22,15 @@ width: 600px;
   border-top: 1px solid #222;
 }
 
-.buttons {
-width: 600px;
+table th {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 15px;
+}
+img {
+  height: 25px;
 }
 
-.btn {
-margin-top: 20px;
-margin-left: 30px;
-height: 40px;
-width: 150px;
-border: 1px solid #222;
-border-radius: 5px;  
+#showOnlyMyListings {
+  display: block;
 }
-.btn:hover {
-background-color: #acacac;
-color: #222;
-}
-

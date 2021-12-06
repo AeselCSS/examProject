@@ -1,15 +1,5 @@
 [
   {
-    "username": "Albert",
-    "password": "DeusVult",
-    "userId": 500709
-  },
-  {
-    "username": "batman",
-    "password": "superman",
-    "userId": 916057
-  },
-  {
     "username": "filippa",
     "password": "cebVek-moxfe0-tamver",
     "userId": 344631
@@ -20,13 +10,14 @@
     "userId": 477001
   },
   {
-    "username": "chso21ad",
-    "password": "fingerscrossed",
-    "userId": 258855
+    "username": "Chris",
+    "password": "Xsw23edc",
+    "userId": 591069
   },
   {
-    "username": "anahero",
-    "password": "Qwerty123",
-    "userId": 910985
-  }
+    "username": "elmer",
+    "password": "fjot",
+    "userId": 397263
+  },
+  {}
 ]

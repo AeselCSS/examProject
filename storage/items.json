@@ -1,90 +1,34 @@
 [
   {
-    "category": "Fashion",
-    "name": "T-shirt",
-    "price": 100,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 2626
-  },
-  {
-    "category": "Outdoor",
-    "name": "Iglo Telt",
-    "price": 550,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 8586
-  },
-  {
     "category": "Electronics",
-    "name": "PC",
-    "price": 10000,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 1564
-  },
-  {
-    "category": "Electronics",
-    "name": "Grafic Card",
-    "price": 3000,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 7556
-  },
-  {
-    "category": "Fashion",
-    "name": "Pants",
-    "price": 250,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 9564
-  },
-  {
-    "category": "Other",
-    "name": "Puppy",
-    "price": 600,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 1235
-  },
-  {
-    "category": "Toys",
-    "name": "Darth Vader puzzle",
-    "price": 50,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 9458
+    "name": "RTX 3080",
+    "price": "10000",
+    "userId": "477001",
+    "itemId": 3032,
+    "image": "uploads/516bKImSYiF0VcpkMB9uPMxp.png"
   },
   {
     "category": "Home and Garden",
-    "name": "Hedgetrimmer",
-    "price": 1000,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 7594
+    "name": "Garden gnome",
+    "price": "150",
+    "userId": "591069",
+    "itemId": 4569,
+    "image": "uploads/v3nRRO9RwoLUtlokiD_zThIt.jpeg"
   },
   {
     "category": "Sport and Leisure",
-    "name": "Bicycle",
-    "price": 900,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 9647
+    "name": "bike",
+    "price": "800",
+    "userId": "591069",
+    "itemId": 3782,
+    "image": "uploads/merK5zhF2SwkCdx3NZmH4TVE.jpg"
   },
   {
-    "category": "Home and Garden",
-    "name": "Garden Gnome",
-    "price": 100,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 4455
-  },
-  {
-    "category": "Cars",
-    "name": "BMW",
-    "price": 10000000,
-    "imageURL": "Test",
-    "description": "Lorem ipsum",
-    "itemId": 8846
+    "category": "Fashion",
+    "name": "red scarf",
+    "price": "50",
+    "userId": "591069",
+    "itemId": 1554,
+    "image": "uploads/T0s3hIJjSv7r-7YKe58ZCncG.jpg"
   }
 ]
