@@ -1,11 +1,11 @@
 //step 1 find item from itemId
 //step 1 find item from itemId method GET or item.itemId
-document.getElementById("submitItemId").addEventListener("click", () => {
+document.getElementById("submitItemId").addEventListener("click", async () => {
   const itemId = document.getElementById("itemIdInput").value;
   let url = `http://localhost:1337/items/delete/${itemId}`;
   
 console.log(url);
-  fetch(url, {method: "DELETE" })
+  await fetch(url, {method: "DELETE" })
     
     .then((response) => response.json())
     .then((response) => {

@@ -1,11 +1,10 @@
 // List of items created by logged in user
 let table = document.getElementById("showItemData");
 const user = JSON.parse(localStorage.getItem("user"));
-const seller = user.userId;
 
 window.addEventListener("pageshow", async () => {
   document.getElementById("filterBySeller").innerHTML = `
-  <button id="input" value="${seller}" onclick="filterItemSeller()">Only my listings</button>
+  <button id="input" value="${user.userId}" onclick="filterItemSeller()">Only my listings</button>
   `;
   table.innerHTML = `
     
@@ -37,14 +36,11 @@ window.addEventListener("pageshow", async () => {
         `;
       });
     });
-    
 });
 
 // // Sort items by Seller
 function filterItemSeller() {
   // Declare variables
-
-  console.log(seller);
   let input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("input");
   filter = input.value;
@@ -54,7 +50,7 @@ function filterItemSeller() {
   // // Loop through tr's, and hide those that doesnt match
   for (i = 0; i < tr.length; i++) {
     // <- for loop starts in index 0 and keeps running as long as there are rows
-    td = tr[i].getElementsByTagName("td")[4]; // <- Search isolated to the first td within tr
+    td = tr[i].getElementsByTagName("td")[4]; // <- Search isolated to userID
     if (td) {
       // if search query is a match show item
       txtValue = td.textContent || td.innerText;

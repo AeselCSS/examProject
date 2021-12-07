@@ -8,7 +8,6 @@ document.getElementById("updateUserForm").addEventListener("submit", (e) => {
   let url = `http://localhost:1337/users/update/${user.username}`;
   // find existing userId
   const userId = user.userId;
-  
 
   // find new data from the update form
   const newUsername = document.getElementById("username").value;
@@ -33,8 +32,7 @@ document.getElementById("updateUserForm").addEventListener("submit", (e) => {
         console.log(response);
         // Save login data to localstorage in order to keep user logged in
         localStorage.setItem("user", JSON.stringify(updatedUser));
-        document.getElementById("updateUserMessage").innerHTML =
-          "User updated successfully.";
+        window.alert("User updated successfully");
       }
     })
     .catch(() => {

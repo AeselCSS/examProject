@@ -1,9 +1,10 @@
-document.getElementById("createUserForm").addEventListener("submit", (e) => {
+document.getElementById("createUserForm").addEventListener("submit", async (e) => {
   e.preventDefault();
+  const username, password, userId;
 
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const userId = Math.floor(100000 + Math.random() * 900000);
+  username = document.getElementById("username").value;
+  password = document.getElementById("password").value;
+  userId = Math.floor(100000 + Math.random() * 900000);
 
   const user = {
     username: username,
@@ -11,7 +12,7 @@ document.getElementById("createUserForm").addEventListener("submit", (e) => {
     userId: userId,
   };
 
-  fetch("http://localhost:1337/users/create", {
+  await fetch("http://localhost:1337/users/create", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -28,21 +29,3 @@ document.getElementById("createUserForm").addEventListener("submit", (e) => {
       window.alert("oh noes! - Something went wrong.");
     });
 });
-
-/* --- NOT WORKING ---
-let createUserForm = document.getElementById("createUserForm");
-    createUserForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const userId = Math.floor(100000 + Math.random() * 900000);
-        const formData = new FormData(createUserForm);
-        formData.append("userId", userId);
-
-        await fetch("http://localhost:1337/users/create/", {
-            method: "POST",
-            body: formData
-        });
-        if (response) {
-          location.href = "/public/views/login.html";
-        }
-    });
-    */
