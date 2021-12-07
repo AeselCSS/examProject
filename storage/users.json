@@ -1,5 +1,10 @@
 [
   {
+    "username": "admin",
+    "password": "admin",
+    "userId": 123456
+  },
+  {
     "username": "filippa",
     "password": "cebVek-moxfe0-tamver",
     "userId": 344631

@@ -32,13 +32,13 @@ userRoutes.post("/users/create", (req, res) => {
   if (findexistingUsers) {
     return res
       .status(409)
-      .send({ error: true, ErrorMessage: "username already exist" });
+      .send({ error: true, errorMessage: "username already exist" });
   }
   //append the user data
   existingUsers.push(userData);
   //save the new user data
   writeUserData(existingUsers);
-  res.send({ success: true, Message: "User data added successfully" });
+  res.send({ success: true, message: "User data added successfully" });
 });
 
 // READ - GET method
