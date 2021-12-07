@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
           ) {
             // Save login data to localstorage in order to keep user logged in
             localStorage.setItem("user", JSON.stringify(response));
-            location.href = "/public/views/index.html";
+            location.href = "/";
           } else {
             window.alert("Username or Password is incorrect");
           }

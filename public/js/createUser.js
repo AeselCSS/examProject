@@ -1,10 +1,9 @@
 document.getElementById("createUserForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const username, password, userId;
-
-  username = document.getElementById("username").value;
-  password = document.getElementById("password").value;
-  userId = Math.floor(100000 + Math.random() * 900000);
+  
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const userId = Math.floor(100000 + Math.random() * 900000);
 
   const user = {
     username: username,

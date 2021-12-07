@@ -10,7 +10,7 @@ app.use(cors());
 
 // route
 const routes = require("./routes/routes");
-app.use("/", routes, express.static("public"));
+app.use("/", routes, express.static("public/views"));
 
 
 

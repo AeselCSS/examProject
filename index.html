@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-  <link rel="stylesheet" href="./../css/navigation.css">
-  <link rel="stylesheet" href="./../css/index.css">
-  <link rel="stylesheet" href="./../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <link rel="stylesheet" href="./public/css/navigation.css">
+  <link rel="stylesheet" href="./public/css/index.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
 </head>
 <body>
   <!-- START OF NAVIGATION -->
@@ -19,9 +19,9 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="account.html">Show user</a>
-        <a href="updateUser.html">Update user</a>
-        <a id="delete-user" href="deleteUser.html">Delete user</a>
+        <a href="./public/views/account.html">Show user</a>
+        <a href="./public/views/updateUser.html">Update user</a>
+        <a href="./public/views/deleteUser.html">Delete user</a>
       </div>
     </div>
       <div class="dropdown">
@@ -29,13 +29,13 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="itemList.html">Show items</a>
-        <a href="createItem.html">Create item</a>
-        <a href="updateItem.html">Update item</a>
-        <a id="delete-item" href="deleteItem.html">Delete item</a>
+        <a href="./public/views/itemList.html">Show items</a>
+        <a href="./public/views/createItem.html">Create item</a>
+        <a href="./public/views/updateItem.html">Update item</a>
+        <a href="./public/views/deleteItem.html">Delete item</a>
       </div>
     </div> 
-    <a href="login.html" id="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+    <a href="./public/views/login.html" id="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
   </div>
   <!-- END OF NAVIGATION -->
 
@@ -54,8 +54,8 @@
 </div>
 <!-- ITEMS FOR SALE END -->
 
-  <script src="./../js/checkIfLoggedIn.js"></script>
-  <script src="./../js/index.js"></script>
-  <script src="./../js/logout.js"></script>
+  <script src="./public/js/checkIfLoggedIn.js"></script>
+  <script src="./public/js/index.js"></script>
+  <script src="./public/js/logout.js"></script>
 </body>
 </html>

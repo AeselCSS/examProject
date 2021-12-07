@@ -1,10 +1,11 @@
 let updateItemForm = document.getElementById("updateItemForm");
     updateItemForm.addEventListener("submit", async (e) => {
         e.preventDefault();
-        const itemId, url, formData;
-        itemId = document.getElementById("itemIdInput").value;
-        url = `http://localhost:1337/items/update/${itemId}`;
-        formData = new FormData(updateItemForm);
+        const user = JSON.parse(localStorage.getItem("user"));
+        const itemId = document.getElementById("itemIdInput").value;
+        const url = `http://localhost:1337/items/update/${itemId}`;
+        const formData = new FormData(updateItemForm);
+        formData.append("userId", user.userId);
         
         await fetch(url, {
             method: "PUT",

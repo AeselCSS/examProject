@@ -30,5 +30,13 @@
     "name": "Gnomeo",
     "price": "55",
     "image": "uploads/NWMwfNa5zLYRtpeW_juXCeiD.jpeg"
+  },
+  {
+    "itemId": "6634",
+    "category": "Home and Garden",
+    "name": "Hedgetrimmer",
+    "price": "1000000",
+    "userId": "661881",
+    "image": "uploads/4ewtTZEY8UXw8MN7cZNmovS6.png"
   }
 ]
