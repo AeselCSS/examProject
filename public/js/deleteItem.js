@@ -1,9 +1,9 @@
-document.getElementById("submitItemId").addEventListener("click", async () => {
+document.getElementById("submitItemId").addEventListener("click", () => {
   const itemId = document.getElementById("itemIdInput").value;
   let url = `http://localhost:1337/items/delete/${itemId}`;
   
 console.log(url);
-  await fetch(url, {method: "DELETE" })
+  fetch(url, {method: "DELETE" })
     
     .then((response) => response.json())
     .then((response) => {

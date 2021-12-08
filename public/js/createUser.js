@@ -1,4 +1,4 @@
-document.getElementById("createUserForm").addEventListener("submit", async (e) => {
+document.getElementById("createUserForm").addEventListener("submit", (e) => {
   e.preventDefault();
   
   const username = document.getElementById("username").value;
@@ -19,7 +19,7 @@ document.getElementById("createUserForm").addEventListener("submit", async (e) =
     userId: userId,
   };
 
-  await fetch("http://localhost:1337/users/create", {
+  fetch("http://localhost:1337/users/create", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

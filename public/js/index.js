@@ -2,7 +2,7 @@
 
 // List of items created by all users
 let table = document.getElementById("showItemData");
-window.addEventListener("pageshow", async () => {
+window.addEventListener("pageshow", () => {
   table.innerHTML = `
     
       <tr>
@@ -15,7 +15,7 @@ window.addEventListener("pageshow", async () => {
       </tr> 
         
   `;
-  await fetch("http://localhost:1337/items/list", {
+  fetch("http://localhost:1337/items/list", {
     method: "GET",
   })
     .then((res) => res.json())

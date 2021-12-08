@@ -2,7 +2,7 @@
 let table = document.getElementById("showItemData");
 const user = JSON.parse(localStorage.getItem("user"));
 
-window.addEventListener("pageshow", async () => {
+window.addEventListener("pageshow", () => {
   document.getElementById("filterBySeller").innerHTML = `
   <button id="input" value="${user.userId}" onclick="filterItemSeller()">Only my listings</button>
   `;
@@ -18,7 +18,7 @@ window.addEventListener("pageshow", async () => {
       </tr> 
         
   `;
-  await fetch("http://localhost:1337/items/list", {
+  fetch("http://localhost:1337/items/list", {
     method: "GET",
   })
     .then((res) => res.json())

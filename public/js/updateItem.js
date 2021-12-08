@@ -1,5 +1,5 @@
 let updateItemForm = document.getElementById("updateItemForm");
-    updateItemForm.addEventListener("submit", async (e) => {
+    updateItemForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const user = JSON.parse(localStorage.getItem("user"));
         const itemId = document.getElementById("itemIdInput").value;
@@ -7,7 +7,7 @@ let updateItemForm = document.getElementById("updateItemForm");
         const formData = new FormData(updateItemForm);
         formData.append("userId", user.userId);
         
-        await fetch(url, {
+        fetch(url, {
             method: "PUT",
             body: formData,
         })

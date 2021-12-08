@@ -1,10 +1,10 @@
-document.getElementById("delete").addEventListener("submit", async (e) => {
+document.getElementById("delete").addEventListener("submit", (e) => {
   e.preventDefault();
 
   const user = JSON.parse(localStorage.getItem("user"));
   let url = `http://localhost:1337/users/delete/${user.username}`;
 
-  await fetch(url, {
+  fetch(url, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
