@@ -12,10 +12,18 @@ document.getElementById("updateUserForm").addEventListener("submit", (e) => {
   // find new data from the update form
   const newUsername = document.getElementById("username").value;
   const newPassword = document.getElementById("password").value;
+  const newEmail = document.getElementById("email").value;
+  const newFullName = document.getElementById("fullName").value;
+  const newAddress = document.getElementById("address").value;
+  const newZip = document.getElementById("zip").value;
 
   updatedUser = {
     username: newUsername,
     password: newPassword,
+    email: newEmail,
+    fullName: newFullName,
+    adress: newAddress,
+    zip: newZip,
     userId: userId,
   };
 

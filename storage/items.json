@@ -1,42 +1,58 @@
 [
   {
-    "category": "Electronics",
-    "name": "RTX 3080",
-    "price": "10000",
-    "userId": "477001",
-    "itemId": 3032,
-    "image": "uploads/516bKImSYiF0VcpkMB9uPMxp.png"
-  },
-  {
-    "category": "Sport and Leisure",
-    "name": "bike",
-    "price": "800",
-    "userId": "591069",
-    "itemId": 3782,
-    "image": "uploads/merK5zhF2SwkCdx3NZmH4TVE.jpg"
+    "category": "Home and Garden",
+    "name": "Hedgetrimmer",
+    "price": "500",
+    "userId": "871471",
+    "itemId": 5609,
+    "image": "uploads/gWDmrJ6-U-mjNR98N8pJVxdG.png"
   },
   {
     "category": "Fashion",
-    "name": "red scarf",
+    "name": "Denim jacket",
+    "price": "250",
+    "userId": "871471",
+    "itemId": 1644,
+    "image": "uploads/dfIPdcxqjKLj9dv1QMmRtRmt.jpeg"
+  },
+  {
+    "category": "Electronics",
+    "name": "Grafic card RTX 3080ti",
+    "price": "10000",
+    "userId": "871471",
+    "itemId": 8765,
+    "image": "uploads/dsa76StkPPtsvB3ufWchx-dJ.png"
+  },
+  {
+    "category": "Sport and Leisure",
+    "name": "Bike",
+    "price": "1000",
+    "userId": "871471",
+    "itemId": 7774,
+    "image": "uploads/0r95sN9losvt-RrPjggdAUGG.jpg"
+  },
+  {
+    "category": "Fashion",
+    "name": "red Scarf",
     "price": "50",
-    "userId": "591069",
-    "itemId": 1554,
-    "image": "uploads/T0s3hIJjSv7r-7YKe58ZCncG.jpg"
+    "userId": "224123",
+    "itemId": 5143,
+    "image": "uploads/-zClT1_QMi-pfv2L1TaTAD_5.jpg"
   },
   {
-    "itemId": "1111",
-    "userId": "591069",
-    "category": "Home and Garden",
-    "name": "Gnomeo",
-    "price": "55",
-    "image": "uploads/NWMwfNa5zLYRtpeW_juXCeiD.jpeg"
+    "category": "Toys",
+    "name": "puzzle",
+    "price": "25",
+    "userId": "224123",
+    "itemId": 1418,
+    "image": "uploads/9K26cEzO2g5ZL6i_XgQEQ2N_.jpg"
   },
   {
-    "itemId": "6634",
-    "category": "Home and Garden",
-    "name": "Hedgetrimmer",
+    "category": "Cars",
+    "name": "BMW M3",
     "price": "1000000",
-    "userId": "661881",
-    "image": "uploads/4ewtTZEY8UXw8MN7cZNmovS6.png"
+    "userId": "224123",
+    "itemId": 3672,
+    "image": "uploads/NJPKaLEFNpcjf2w58ncayeVt.jpg"
   }
 ]
