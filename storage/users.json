@@ -4,17 +4,17 @@
     "password": "admin",
     "email": "admin@admin.dk",
     "fullName": "Chris Sørensen",
-    "adress": "Adminroad 1",
+    "address": "Adminroad 1",
     "zip": "1234",
     "userId": 871471
   },
   {
-    "username": "chso",
-    "password": "test",
-    "email": "chso@test.dk",
-    "fullName": "Chris Sørensen",
-    "adress": "somethingstreet 12",
-    "zip": "1234",
+    "username": "chso2",
+    "password": "test1",
+    "email": "test1@test2.dk",
+    "fullName": "Lorem Ipsum",
+    "address": "Lipsumstreet 123",
+    "zip": "9876",
     "userId": 224123
   }
 ]

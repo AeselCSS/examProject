@@ -1,9 +1,10 @@
+// Check if user is already logged in - if so redirect 
 document.addEventListener("DOMContentLoaded", (e) => {
   const user = localStorage.getItem("user");
   if (user) {
     location.href = "/public/views/";
   }
-
+// User login
   document.getElementById("loginform").addEventListener("submit", (e) => {
     e.preventDefault();
 

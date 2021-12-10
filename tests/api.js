@@ -5,36 +5,23 @@ const app = require("../server");
 
 chai.use(chaiHttp);
 
-// Test made from Edris' videoguide - added
-describe("GET Users API", () => {
-  describe("GET/users/list", () => {
-    it("should return a list of users", (done) => {
-      chai
-        .request(app)
-        .get("/users/list")
-        .end((err, res) => {
-          expect(err).to.be.null;
-          expect(res.statusCode).to.equal(200);
-          expect(res.body)
-            .to.be.an("array")
-            .and.to.have.property(0)
-            .that.includes.all.keys(["username", "password", "userId"]);
-
-          done();
-        });
-    });
-  });
-});
-
 // Test of functionel demand #1 - User should be able to add an account
-// note that this test cant run multiple times because it require a username not already present in db
+// note that this test can only run once because it require a username not already present in db
 describe("Create account API", () => {
     it("should create new account", (done) => {
       chai
       .request(app)
       .post("/users/create")
       .set("Content-Type", "application/json")
-      .send({ username: "admin_test", password: "admin_test", userId: 112233})
+      .send({ 
+        username: "admin_test", 
+        password: "admin_test", 
+        email: "admin@test.com",
+        fullName: "admin",
+        address: "testingstreet 12",
+        zip: "1234",
+        userId: 112233
+      })
       .end((err, res) => {
         expect(err).to.be.null;
         expect(res.statusCode).to.equal(200);
@@ -60,7 +47,7 @@ describe("Login API", () => {
         expect(res).to.be.json;
         expect(res.body)
           .to.be.an("object")
-          .that.includes.all.keys(["username", "password", "userId"]);
+          .that.includes.all.keys(["username", "password", "email", "fullName", "address", "zip", "userId"]);
         done();
       });
   });

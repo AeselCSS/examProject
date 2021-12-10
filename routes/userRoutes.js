@@ -57,25 +57,25 @@ userRoutes.get("/users/:username", (req, res) => {
     (user) => user.username == username
   );
   if (!findexistingUsers) {
-    return res.status(409).send({ error: true, message: "username not exist" });
+    return res.status(409).send({ error: true, message: "username does not exist" });
   }
   res.send(findexistingUsers);
 });
 
 /* Update - PUT method */
 userRoutes.put("/users/update/:username", (req, res) => {
-  //get the userId from url
+  //get the username from url
   const username = req.params.username;
   //get the update data
   const userData = req.body;
   //get the existing user data
   const existingUsers = readUserData();
-  //check if the userId exist or not
+  //check if the username exist or not
   const findexistingUsers = existingUsers.find(
     (user) => user.username == username
   );
   if (!findexistingUsers) {
-    return res.status(409).send({ error: true, message: "username not exist" });
+    return res.status(409).send({ error: true, message: "username does not exist" });
   }
   //filter the userdata
   const updateUser = existingUsers.filter((user) => user.username != username);
@@ -116,7 +116,7 @@ userRoutes.post("/users/login", (req, res) => {
   const username = req.body.username;
   //get the existing user data
   const existingUsers = readUserData();
-  //check if the userId exist or not
+  //check if the username exist or not
   const findexistingUsers = existingUsers.find(
     (user) => user.username === username
   );

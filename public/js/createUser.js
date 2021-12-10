@@ -14,7 +14,7 @@ document.getElementById("createUserForm").addEventListener("submit", (e) => {
     password: password,
     email: email,
     fullName: fullName,
-    adress: address,
+    address: address,
     zip: zip,
     userId: userId,
   };

@@ -48,11 +48,19 @@
     "image": "uploads/9K26cEzO2g5ZL6i_XgQEQ2N_.jpg"
   },
   {
-    "category": "Cars",
-    "name": "BMW M3",
-    "price": "1000000",
+    "category": "Electronics",
+    "name": "MacBook Pro 14",
+    "price": "8000",
     "userId": "224123",
     "itemId": 3672,
     "image": "uploads/NJPKaLEFNpcjf2w58ncayeVt.jpg"
+  },
+  {
+    "category": "Fashion",
+    "name": "Jacket",
+    "price": "100",
+    "userId": "871471",
+    "itemId": 6059,
+    "image": "uploads/a7IEAnkpNuaGdDKQj8gmrioO.jpeg"
   }
 ]
